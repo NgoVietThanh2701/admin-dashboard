@@ -1,6 +1,16 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-
+import ReactDOM from 'react-dom/client';
+import './index.css';
 import App from './App';
+import { ContextProvider } from './contexts/ContextProvider';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+// Registering Syncfusion license key
+// registerLicense('ORg4AjUWIQA/Gnt2VlhhQlJCfV5DQmRWfFN0RnNYdV9xflVHcC0sT3RfQF5iSX5bdkRiW3tacXFTQQ==');
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+   <ContextProvider>
+      <App />
+   </ContextProvider>
+)
+
